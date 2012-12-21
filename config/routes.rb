@@ -1,4 +1,8 @@
 SortExample::Application.routes.draw do
+  resources :quotes, :only => [:index]
+  
+  root :to => 'quotes#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
