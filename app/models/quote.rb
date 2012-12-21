@@ -40,7 +40,7 @@ class Quote < ActiveRecord::Base
       table_joins   = []
       order_clauses = []
       
-      default_sorts = default_sort_column.clone
+      default_sorts = default_sort_columns.clone
       default_sorts.delete(sort_column) # remove the sort column's default if it exists
       
       default_sorts.each do |column_name, sort_clause|
