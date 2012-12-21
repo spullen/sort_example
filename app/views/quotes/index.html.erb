@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th><%= sortable('product_name', 'Product') %></th>
+      <th><%= sortable('vendor_name', 'Vendor') %></th>
+      <th><%= sortable('price') %></th>
+      <th><%= sortable('quantity') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @quotes.each do |quote| -%>
+      <tr>
+        <td><%= quote.product_name %></td>
+        <td><%= quote.vendor_name %></td>
+        <td><%= quote.price %></td>
+        <td><%= quote.quantity %></td>
+      </tr>
+    <% end -%>
+  </tbody>
+</table>
