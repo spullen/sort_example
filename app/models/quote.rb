@@ -7,6 +7,9 @@ class Quote < ActiveRecord::Base
   validates :price, :presence => true
   validates :quantity, :presence => true
   
+  delegate :name, :to => :vendor, :prefix => true
+  delegate :name, :to => :product, :prefix => true
+  
   class << self; attr_accessor :sort_columns, :default_sort_columns; end
   
   SORT_ASC                = 'ASC'
