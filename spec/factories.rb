@@ -1,3 +1,3 @@
-FactoryGirl.defined do
+FactoryGirl.define do
 
 end
