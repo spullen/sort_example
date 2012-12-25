@@ -1,0 +1,3 @@
+FactoryGirl.defined do
+
+end
