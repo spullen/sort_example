@@ -52,6 +52,16 @@ describe SortableHelper do
         @node.should_not have_css('a.sortable-asc')
       end
     end
+    
+    context 'given the title is specified' do
+      before(:each) do
+        @node = Capybara::Node::Simple.new(@mock_view.sortable("column", "Custom Title"))
+      end
+      
+      it 'should set the sortable-current class' do
+        @node.should have_content("Custom Title")
+      end
+    end
   end
 
 end
