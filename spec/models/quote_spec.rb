@@ -43,6 +43,12 @@ describe Quote do
         end
       end
     end
+    
+    context 'given a sort column from another table' do
+      it 'should sort by the specified column in descending order' do
+        Quote.sort(:product_name, 'DESC').should == [quote1, quote4, quote3, quote2]
+      end
+    end
   end
 
 end
