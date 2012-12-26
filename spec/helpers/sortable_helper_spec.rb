@@ -38,6 +38,20 @@ describe SortableHelper do
         @node.should have_css('a.sortable-asc')
       end
     end
+    
+    context 'given the sort column is not the current column being sorted' do
+      before(:each) do
+        @node = Capybara::Node::Simple.new(@mock_view.sortable("other_column"))
+      end
+      
+      it 'should set the sortable-current class' do
+        @node.should_not have_css('a.sortable-current')
+      end
+      
+      it 'should set the sortable-<direction>' do
+        @node.should_not have_css('a.sortable-asc')
+      end
+    end
   end
 
 end
