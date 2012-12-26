@@ -2,7 +2,6 @@ class QuotesController < ApplicationController
   respond_to :html
   
   def index
-    puts "HERE #{sort_column} - #{sort_direction}"
     @quotes = Quote.sort(sort_column, sort_direction)
     respond_with(@quotes)
   end

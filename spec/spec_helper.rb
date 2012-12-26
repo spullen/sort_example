@@ -18,7 +18,7 @@ RSpec.configure do |config|
   config.order = "random"
   
   config.include Rails.application.routes.url_helpers
-  config.include ActionView::Helpers::NumberHelper
+  config.include ActionView::Helpers
   config.include Capybara::DSL
   config.include FactoryGirl::Syntax::Methods
   
