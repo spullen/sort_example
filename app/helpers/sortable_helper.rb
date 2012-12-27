@@ -1,4 +1,6 @@
 module SortableHelper
+
+  # TODO: the controller, action thing is definitely not correct, but not sure how to get the implicit path to work with tests...
   def sortable(column, title = nil, html_options = {})
     title ||= column.titleize
     css_class = (column == sort_column) ? "sortable-current sortable-#{sort_direction}" : nil
