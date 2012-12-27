@@ -1,23 +1,18 @@
 require 'spec_helper'
 
 describe SortableHelper do
-
-  class MockView < ActionView::Base
-    include ApplicationHelper
-    include SortableHelper
-  end
   
   before(:each) do
-    @mock_view = MockView.new
-    @mock_view.stub!(:sort_column).and_return("column")
-    @mock_view.stub!(:sort_direction).and_return("asc")
-    @mock_view.stub!(:url_for).and_return("/controller/action")
+    helper.stub!(:controller_name).and_return("quotes")
+    helper.stub!(:action_name).and_return("index")
+    helper.stub!(:sort_column).and_return("column")
+    helper.stub!(:sort_direction).and_return("asc")
   end
   
   describe '#sortable' do
     context 'given the column is the only specified parameter' do
       before(:each) do
-        @node = Capybara::Node::Simple.new(@mock_view.sortable("test"))
+        @node = Capybara::Node::Simple.new(helper.sortable("test"))
       end
       
       it 'should set the title to be the capitalized version of the column name' do
@@ -27,7 +22,7 @@ describe SortableHelper do
     
     context 'given the sort column is the current column being sorted' do
       before(:each) do
-        @node = Capybara::Node::Simple.new(@mock_view.sortable("column"))
+        @node = Capybara::Node::Simple.new(helper.sortable("column"))
       end
       
       it 'should set the sortable-current class' do
@@ -41,7 +36,7 @@ describe SortableHelper do
     
     context 'given the sort column is not the current column being sorted' do
       before(:each) do
-        @node = Capybara::Node::Simple.new(@mock_view.sortable("other_column"))
+        @node = Capybara::Node::Simple.new(helper.sortable("other_column"))
       end
       
       it 'should set the sortable-current class' do
@@ -55,7 +50,7 @@ describe SortableHelper do
     
     context 'given the title is specified' do
       before(:each) do
-        @node = Capybara::Node::Simple.new(@mock_view.sortable("column", "Custom Title"))
+        @node = Capybara::Node::Simple.new(helper.sortable("column", "Custom Title"))
       end
       
       it 'should set the sortable-current class' do
