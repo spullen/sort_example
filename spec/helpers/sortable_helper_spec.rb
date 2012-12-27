@@ -3,7 +3,7 @@ require 'spec_helper'
 describe SortableHelper do
   
   before(:each) do
-    helper.stub!(:controller_name).and_return("quotes")
+    helper.stub!(:controller_name).and_return("quotes") # this is definitely not the correct way to do this, but couldn't get it to work otherwise
     helper.stub!(:action_name).and_return("index")
     helper.stub!(:sort_column).and_return("column")
     helper.stub!(:sort_direction).and_return("asc")
