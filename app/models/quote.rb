@@ -10,9 +10,9 @@ class Quote < ActiveRecord::Base
   delegate :name, :to => :vendor, :prefix => true
   delegate :name, :to => :product, :prefix => true
 
-  sortable :price        => {:column_name => :price, :default => 'ASC'},
-           :quantity     => {:column_name => :quantity},
-           :vendor_name  => {:column_name => :name, :joins => :vendor},
-           :product_name => {:column_name => :name, :joins => :product}
+  sort_this :price        => {:column_name => :price, :default => 'ASC'},
+            :quantity     => {:column_name => :quantity},
+            :vendor_name  => {:column_name => :name, :joins => :vendor},
+            :product_name => {:column_name => :name, :joins => :product}
   
 end

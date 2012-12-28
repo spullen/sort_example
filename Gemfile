@@ -5,7 +5,7 @@ gem 'rails', '3.2.9'
 gem 'mysql2'
 gem 'jquery-rails'
 
-gem 'will_sort', :git => 'git://github.com/spullen/will_sort.git'
+gem 'sort_this', :git => 'git://github.com/spullen/sort_this.git'
 
 group :development, :test do
   gem 'debugger'

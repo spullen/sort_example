@@ -1,8 +1,8 @@
 GIT
-  remote: git://github.com/spullen/will_sort.git
-  revision: 0724f5781124b437b428aa04ef25e48e7572210c
+  remote: git://github.com/spullen/sort_this.git
+  revision: 1e325dbfbf8274c5c9c4cbfe288b4f812fc498f7
   specs:
-    sortable (1.0.0)
+    sort_this (1.0.0)
       memoist (= 0.2.0)
       rails (>= 3.0)
 
@@ -190,5 +190,5 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.2.3)
   shoulda
-  sortable!
+  sort_this!
   uglifier (>= 1.0.3)
