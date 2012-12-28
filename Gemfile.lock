@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/spullen/sortable.git
+  revision: 89086d438d4b7471969a23ab7769ccce8f83f26d
+  specs:
+    sortable (0.0.1.alpha)
+      rails (>= 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -181,4 +188,5 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.2.3)
   shoulda
+  sortable!
   uglifier (>= 1.0.3)

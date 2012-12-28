@@ -5,6 +5,8 @@ gem 'rails', '3.2.9'
 gem 'mysql2'
 gem 'jquery-rails'
 
+gem 'sortable', :git => 'git://github.com/spullen/sortable.git'
+
 group :development, :test do
   gem 'debugger'
   gem 'rspec-rails'
