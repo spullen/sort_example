@@ -1,8 +1,9 @@
 GIT
-  remote: git://github.com/spullen/sortable.git
-  revision: 89086d438d4b7471969a23ab7769ccce8f83f26d
+  remote: git://github.com/spullen/will_sort.git
+  revision: 0724f5781124b437b428aa04ef25e48e7572210c
   specs:
-    sortable (0.0.1.alpha)
+    sortable (1.0.0)
+      memoist (= 0.2.0)
       rails (>= 3.0)
 
 GEM
@@ -92,6 +93,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memoist (0.2.0)
     metaclass (0.0.1)
     mime-types (1.19)
     mocha (0.10.5)
